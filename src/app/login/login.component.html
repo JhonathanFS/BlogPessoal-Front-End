@@ -6,15 +6,15 @@
           <h1 class="text-center">Login</h1>
           <form>
           <div class="form-group">
-            <label for="usuario">Usuário</label>
-            <input class="form-control" type="text" name="usuario" id="usuario">
+            <label for="usuario">Email</label>
+            <input class="form-control" type="email" name="usuario" id="usuario" [(ngModel)]="usuarioLogin.usuario">
           </div>
           <div class="form-group">
             <label for="senha">Senha</label>
-            <input class="form-control" type="password" name="senha" id="senha">
+            <input class="form-control" type="password" name="senha" id="senha" [(ngModel)]="usuarioLogin.senha">
           </div>
           <div class="justify-content-center d-flex">
-            <button type="submit" class="btn btn-outline-dark w-50 d-black mx-auto">Entrar</button>
+            <button type="submit" class="btn btn-outline-dark w-50 d-black mx-auto" (click)="logar()">Entrar</button>
           </div>
         </form>
           <hr class="mt-5 mb-5">
