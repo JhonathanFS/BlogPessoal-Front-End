@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     this.authService.logar(this.usuarioLogin).subscribe({
       next: (resp: UsuarioLogin) => {
         this.usuarioLogin = resp;
-        alert('Usuario Logado com sucesso');
+        // alert('Usuario Logado com sucesso');
 
         environment.id = this.usuarioLogin.id;
         environment.nome = this.usuarioLogin.nome
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
         environment.foto = this.usuarioLogin.foto
         environment.usuario = this.usuarioLogin.usuario
         environment.tipo = this.usuarioLogin.tipo
-
+        console.log(environment)
         this.router.navigate(['/home']);
       },
       error: (error) => {
