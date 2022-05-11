@@ -1,0 +1,14 @@
+<div class="container-fluid py-5">
+  <div class="container d-flex flex-column align-content-center">
+    <h1 class="text-center mb-3">Apagar tema:<span class="font-weight-bold"> {{tema.nome}}</span></h1>
+
+    <p class="text-center">Todas as postagens feitas com esse tema, irão DESAPARECER junto.</p>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6 d-flex justify-content-center">
+        <button class="btn btn-outline-dark mr-3" routerLink="/temas">Cancelar</button>
+        <button class="btn btn-outline-danger" (click)="tDelete()">Apagar</button>
+      </div>
+    </div>
+  </div>
+</div>
